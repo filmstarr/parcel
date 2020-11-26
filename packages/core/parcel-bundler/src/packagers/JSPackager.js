@@ -24,6 +24,8 @@ class JSPackager extends Packager {
           this.options.hmrPort
         };process.env.HMR_HOSTNAME=${JSON.stringify(
           this.options.hmrHostname
+        )};process.env.HMR_PROTOCOL=${JSON.stringify(
+          this.options.hmrProtocol
         )};` + preludeCode;
     }
     await this.write(preludeCode + '({');

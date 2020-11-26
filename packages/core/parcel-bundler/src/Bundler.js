@@ -139,6 +139,7 @@ class Bundler extends EventEmitter {
         options.hmrHostname ||
         options.host ||
         (options.target === 'electron' ? 'localhost' : ''),
+      hmrProtocol: options.hmrProtocol,
       detailedReport: options.detailedReport || false,
       global: options.global,
       autoinstall:
